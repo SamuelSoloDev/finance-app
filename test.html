@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Purple Finance Dashboard Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#e11d48", // Rose 600
+                "rose-accent": "#fb7185", // Rose 400
+                "plum-deep": "#2e1065", // Violet 950
+                "plum-mid": "#4c1d95", // Violet 900
+                "magenta-accent": "#d946ef", // Fuchsia 500
+                "background-light": "#fdf2f8", // Rose 50
+                "background-dark": "#0f0714", // Very dark purple/black
+              },
+              fontFamily: {
+                "display": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --ios-blur: 20px;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .ios-blur { backdrop-filter: blur(var(--ios-blur)); -webkit-backdrop-filter: blur(var(--ios-blur)); }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden max-w-md mx-auto shadow-2xl">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 pt-8">
+<div class="flex size-12 shrink-0 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-rose-accent/30" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdWZKFigqSTTLHYEJsLM3I1XGKQv-dBKvaJLwmD7-ZXovmrmG7AuzgE81tBqE1QwNffZkOzDuD0-vgf4oTtM5e02k-ikPw_HDHB4BUxlnnbpf_EVib21puLamOxAgXAfPL8_R3IE5RHk651vfuqnNWPBtsnv7jo4h0wGyXdoGML32FdWEHJ1RGjVQ6xBbHLzjR7Lx0aGoWoq7ti6z1Eb2zD0vwrN-7ma_i72djrPTWbevfJT0sB8ree3nHoVmjFRw2bJGVK2BGzLM");'>
+</div>
+</div>
+<div class="flex-1 px-3">
+<p class="text-slate-500 dark:text-rose-300/60 text-xs font-medium uppercase tracking-wider">Good Morning</p>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Alex Rivera</h2>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-full bg-slate-200 dark:bg-rose-500/10 text-slate-900 dark:text-rose-400">
+<span class="material-symbols-outlined" style="font-size: 24px;">notifications</span>
+</button>
+</div>
+</div>
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-plum-mid to-background-dark border border-white/10 relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none" data-alt="Subtle abstract pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABWIUshn1ByqJKPe51PaPGXCaJeq9BQH-_b2ozhmCgQ0ld7KlOR6UxriQEJxUQoSCEXLDtZS-u1OP4eYOSjW4WwEjqDhI5YIAsZRBJxn5xqHNsOlEHus4ypVlGF0q7Tb_ALWLOrExSpTG6QLefNrxooSAwUtBdNvtyAYkTLrZnAcCoNbZIRidXI2LX9ydfeoPoY0RV3UjWBdr3-TYHfidDGy_XzmR9LoKNDYnAkHy_q8y3xfR5aczifNi8z-BwxH69QerZn1157jE');">
+</div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-8 px-6 relative z-10">
+<div class="flex items-center justify-between mb-1">
+<p class="text-rose-200/80 text-sm font-medium leading-normal">Total Balance</p>
+<span class="bg-magenta-accent/20 text-magenta-accent text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter border border-magenta-accent/30">Live</span>
+</div>
+<p class="text-white text-4xl font-extrabold leading-tight tracking-[-0.03em]">$12,450.00</p>
+<p class="text-rose-300/40 text-[10px] font-normal leading-normal mt-1">Updated 2 mins ago</p>
+</div>
+<div class="grid grid-cols-2 bg-white/5 border-t border-white/5 backdrop-blur-sm">
+<div class="flex flex-col gap-1 py-4 px-6 border-r border-white/5">
+<p class="text-rose-300/60 text-xs font-medium uppercase tracking-wide">Savings</p>
+<p class="text-rose-400 text-lg font-bold">+$15,200.00</p>
+</div>
+<div class="flex flex-col gap-1 py-4 px-6">
+<p class="text-rose-300/60 text-xs font-medium uppercase tracking-wide">Debt</p>
+<p class="text-plum-300 text-lg font-bold">-$2,750.00</p>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 py-2">
+<div class="flex justify-between gap-3">
+<button class="flex flex-1 flex-col gap-2 cursor-pointer items-center justify-center rounded-2xl py-4 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 transition-all hover:bg-rose-500/5 group">
+<span class="material-symbols-outlined text-rose-400 group-hover:scale-110 transition-transform" style="font-size: 24px;">history</span>
+<span class="text-slate-700 dark:text-white text-xs font-bold tracking-tight">History</span>
+</button>
+<button class="flex flex-1 flex-col gap-2 cursor-pointer items-center justify-center rounded-2xl py-4 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 transition-all hover:bg-rose-500/5 group">
+<span class="material-symbols-outlined text-rose-400 group-hover:scale-110 transition-transform" style="font-size: 24px;">account_balance_wallet</span>
+<span class="text-slate-700 dark:text-white text-xs font-bold tracking-tight">Debts</span>
+</button>
+<button class="flex flex-1 flex-col gap-2 cursor-pointer items-center justify-center rounded-2xl py-4 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 transition-all hover:bg-rose-500/5 group">
+<span class="material-symbols-outlined text-rose-400 group-hover:scale-110 transition-transform" style="font-size: 24px;">receipt_long</span>
+<span class="text-slate-700 dark:text-white text-xs font-bold tracking-tight">Expenses</span>
+</button>
+</div>
+</div>
+<div class="px-4 mt-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-white text-md font-bold">Recent Activity</h3>
+<button class="text-rose-400 text-xs font-semibold">View All</button>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-4 p-3 rounded-2xl bg-slate-100 dark:bg-white/[0.03] border border-slate-200 dark:border-white/5">
+<div class="size-10 rounded-full bg-slate-200 dark:bg-plum-900/40 flex items-center justify-center text-rose-400">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white text-sm font-bold leading-none">Apple Store</p>
+<p class="text-slate-500 dark:text-rose-300/40 text-[11px] mt-1">Electronics • Today</p>
+</div>
+<p class="text-slate-900 dark:text-plum-200 text-sm font-bold">-$129.00</p>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-2xl bg-slate-100 dark:bg-white/[0.03] border border-slate-200 dark:border-white/5">
+<div class="size-10 rounded-full bg-slate-200 dark:bg-plum-900/40 flex items-center justify-center text-rose-400">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white text-sm font-bold leading-none">Monthly Salary</p>
+<p class="text-slate-500 dark:text-rose-300/40 text-[11px] mt-1">Income • 2 days ago</p>
+</div>
+<p class="text-rose-400 text-sm font-bold">+$4,200.00</p>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-2xl bg-slate-100 dark:bg-white/[0.03] border border-slate-200 dark:border-white/5">
+<div class="size-10 rounded-full bg-slate-200 dark:bg-plum-900/40 flex items-center justify-center text-rose-400">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white text-sm font-bold leading-none">Blue Bottle Coffee</p>
+<p class="text-slate-500 dark:text-rose-300/40 text-[11px] mt-1">Dining • 3 days ago</p>
+</div>
+<p class="text-slate-900 dark:text-plum-200 text-sm font-bold">-$12.50</p>
+</div>
+</div>
+</div>
+<div class="h-24 bg-transparent"></div>
+<div class="fixed bottom-24 right-8 z-50">
+<button class="flex size-14 items-center justify-center rounded-full bg-gradient-to-tr from-rose-600 to-magenta-accent text-white shadow-lg shadow-rose-900/40 hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-size: 32px; font-weight: 600;">add</span>
+</button>
+</div>
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto h-20 bg-white/80 dark:bg-background-dark/80 ios-blur flex items-center justify-around px-6 border-t border-slate-200 dark:border-white/10">
+<div class="flex flex-col items-center gap-1 text-rose-500">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-rose-300/30">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-medium">Insights</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-rose-300/30">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="text-[10px] font-medium">Cards</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-rose-300/30">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</div>
+</div>
+</div>
+
+</body></html>
