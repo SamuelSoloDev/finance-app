@@ -15,6 +15,10 @@ export default function Home() {
   const {debts} = useDebt();
   const navigate = useNavigate();
 
+  function navigateTo(page) {
+    navigate(`/${page}`)
+  }
+
   return (
     <div className='relative flex flex-col
     bg-[#fdf2f8] dark:bg-[#0f0714] h-auto min-h-screen
@@ -40,7 +44,7 @@ export default function Home() {
       expense={calcAmount(expenses)}>
       </Summary>
 
-      <LinkButtons></LinkButtons>
+      <LinkButtons navigateTo={navigateTo}></LinkButtons>
 
       <HistoryList list={expenses}></HistoryList>
     </div>

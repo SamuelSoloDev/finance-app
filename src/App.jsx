@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import { IncomesPage } from "./pages/PageIncomes"
+import { ExpensesPage } from "./pages/PageExpenses";
+import { DebtsPage } from "./pages/PageDebts";
 
 import './App.css'
 
@@ -14,6 +16,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path='/income' element={<IncomesPage/>}></Route>
+      <Route path='/expense' element={<ExpensesPage/>}></Route>
+      <Route path='/debt' element={<DebtsPage/>}></Route>
     </Routes>
   )
 }
