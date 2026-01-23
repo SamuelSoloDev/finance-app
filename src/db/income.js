@@ -7,15 +7,15 @@ export async function getAllIncomes() {
 
 export async function addIncome(income) {
   const db = await dbPromise
-  return db.add("incomes", income)
+  return db.add("income", income)
 }
 
 export async function updateIncome(income) {
   const db = await dbPromise
-  return db.put("incomes", income)
+  return db.put("income", income)
 }
 
 export async function deleteIncome(id) {
   const db = await dbPromise
-  return db.delete("incomes", id)
+  return db.delete("income", id)
 }

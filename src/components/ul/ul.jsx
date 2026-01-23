@@ -16,7 +16,9 @@ return (
       key={i.id}
       id={i.id}
       amount={i.amount}
+      name={i.name}
       note={i.note}
+      type={i.type}
       date={i.date}
       handleDelete={handleDelete}
       >

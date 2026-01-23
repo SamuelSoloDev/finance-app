@@ -10,15 +10,25 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function Home() {
-  const {expenses} = useExpense();
-  const {incomes} = useIncome();
-  const {debts} = useDebt();
+  const {expenses, remove: removeExpense} = useExpense();
+  const {incomes, remove: removeIcome} = useIncome();
+  const {debts, remove: removeDebt} = useDebt();
   const navigate = useNavigate();
+
+  const REMOVE_FUNCTIONS = {
+    expense: removeExpense,
+    income: removeIcome,
+    debt: removeDebt
+  }
 
   function navigateTo(page) {
     navigate(`/${page}`)
   }
 
+ async function handleDelete(type, id) {
+    REMOVE_FUNCTIONS[type](id);
+    await removeExpense(id)
+  }
   return (
     <div className='relative flex flex-col
     bg-[#fdf2f8] dark:bg-[#0f0714] h-auto min-h-screen
@@ -46,7 +56,10 @@ export default function Home() {
 
       <LinkButtons navigateTo={navigateTo}></LinkButtons>
 
-      <HistoryList list={expenses}></HistoryList>
+      <HistoryList
+      handleDelete={handleDelete}
+      list={incomes}
+      ></HistoryList>
     </div>
   )
 }
