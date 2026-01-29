@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 
-export function Summary({debt, income, expense}) {
+export function Summary({income, expense}) {
+
+  const totality = income - expense
   return (
     <div className="p-4">
       <div className="flex flex-col items-stretch justify-start
@@ -14,23 +16,23 @@ export function Summary({debt, income, expense}) {
       gap-1 py-8 px-6 relative
       z-10 text-white p-4">
         <h1 className="text-rose-200/80 text-sm font-medium leading-normal">Totalidad</h1>
-        <p className="text-white text-4xl font-extrabold leading-tight tracking-[-0.03em]">{income}</p>
+        <p className="text-white text-4xl font-extrabold leading-tight tracking-[-0.03em]">{totality}</p>
       </div>
 
 
       <div className="grid grid-cols-2 bg-white/5 border-t border-white/5 backdrop-blur-sm">
 
         <div className="flex flex-col gap-1 py-4 px-6 border-r border-white/5">
-          <h1 className="text-rose-300/60 text-xs font-medium uppercase tracking-wide">Deudas</h1>
-          <p className="text-rose-400 text-lg font-bold">{debt}</p>
+          <h1 className="text-rose-300/60 text-xs font-medium uppercase tracking-wide">Gastos</h1>
+          <p className="text-rose-400 text-lg font-bold">{expense}</p>
         </div>
 
         <div className="flex flex-col gap-1 py-4 px-6">
           <h1 className="text-rose-300/60 text-xs
            font-medium uppercase tracking-wide"
-           >Gastos</h1>
+           >Ingresos</h1>
           <p className="text-plum-300 text-lg font-bold"
-          >{expense}</p>
+          >{income}</p>
         </div>
 
       </div>

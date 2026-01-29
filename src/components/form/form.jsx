@@ -41,6 +41,7 @@ export default function FinanceForm({ eventSubmit }) {
           name="name"
           value={form.name}
           onChange={handleChange}
+          required
         />
       </div>
 
@@ -51,6 +52,7 @@ export default function FinanceForm({ eventSubmit }) {
           name="amount"
           value={form.amount}
           onChange={handleChange}
+          required
         />
       </div>
 
@@ -70,6 +72,7 @@ export default function FinanceForm({ eventSubmit }) {
           name="date"
           value={form.date}
           onChange={handleChange}
+          required
         />
       </div>
 
