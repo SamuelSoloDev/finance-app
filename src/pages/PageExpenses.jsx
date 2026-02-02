@@ -20,6 +20,7 @@ export function ExpensesPage() {
   return(
     <div className=" flex gap-4 flex-col">
       <FinanceForm
+      transactionType={"Gastos"}
       eventSubmit={eventOnSubmit}>
       </FinanceForm>
 

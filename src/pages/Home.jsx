@@ -74,7 +74,8 @@ export default function Home() {
        bg-white/80 dark:bg-[#0f0714]/80
       ios-blur flex items-center justify-center px-6 border-t border-slate-200 dark:border-white/10
       z-40">
-<button className="flex flex-col items-center justify-center gap-0.5 px-8 py-2 rounded-2xl
+<button onClick={() => navigateTo("history")}
+className="flex flex-col items-center justify-center gap-0.5 px-8 py-2 rounded-2xl
 group transition-all">
 <span className="material-symbols-outlined text-rose-500 group-hover:text-magenta-accent
 transition-colors">history</span>
