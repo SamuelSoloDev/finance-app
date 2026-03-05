@@ -8,7 +8,7 @@ export function LinkButtons({navigateTo}) {
   return(
     <div className="px-4 py-2">
       <div className="flex justify-between gap-3">
-        <button onClick={() => navigateTo("history")}
+        <button onClick={() => navigateTo("income")}
         className="flex flex-col flex-1 items-center justify-center
         rounded-2xl border border-slate-200 dark:border-white/5 transition-all
          py-4 bg-slate-100 dark:bg-white/5">

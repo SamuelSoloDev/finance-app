@@ -1,15 +1,19 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function FinanceForm({ eventSubmit, transactionType }) {
+
+  const navigate = useNavigate()
   const [form, setForm] = useState({
     name: "",
     amount: "",
     note: "",
     date: "",
   });
-
   function handleChange(e) {
     const { name, value } = e.target;
+
+
 
     setForm((prev) => ({
       ...prev,
@@ -32,13 +36,19 @@ export default function FinanceForm({ eventSubmit, transactionType }) {
     cleanForm();
   }
 
+  function backToHome() {
+    navigate("/")
+  }
+
   return (
     <div className="dark bg-[#0f0714] text-white min-h-screen font-['Inter',sans-serif]">
       <div className="relative flex h-full min-h-screen w-full flex-col bg-[#0f0714] overflow-x-hidden max-w-md mx-auto">
 
         {/* Header */}
         <div className="flex items-center p-4 justify-between sticky top-0 z-10 pt-12 pb-6 bg-[#0f0714]/80 backdrop-blur">
-          <button className="flex size-10 items-center justify-center rounded-full bg-white/5 text-white active:scale-95 transition-transform">
+          <button
+          onClick={backToHome}
+          className="flex size-10 items-center justify-center rounded-full bg-white/5 text-white active:scale-95 transition-transform">
             <span className="material-symbols-outlined text-[24px]">
               arrow_back_ios_new
             </span>

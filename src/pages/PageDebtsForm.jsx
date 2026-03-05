@@ -1,14 +1,14 @@
-import { useExpense } from "../hooks/useExpense";
+import { useDebt } from "../hooks/useDebt";
 import FinanceForm from "../components/form/form";
 import { prepareObject } from "../utils/prepareObject";
 
-export function ExpensesPage() {
-  const {add} = useExpense()
+export function PageDebtsForm() {
+  const {add} = useDebt()
 
-  const EXPENSE_TYPE = "expense"
+  const DEBT_TYPE = "debt"
 
   async function eventOnSubmit(object){
-     const formateObject = prepareObject(object, EXPENSE_TYPE)
+     const formateObject = prepareObject(object, DEBT_TYPE)
      await add(formateObject)
     }
 
@@ -16,7 +16,7 @@ export function ExpensesPage() {
   return(
     <div className=" flex gap-4 flex-col">
       <FinanceForm
-      transactionType={"Gastos"}
+      transactionType={"Deudas"}
       eventSubmit={eventOnSubmit}>
       </FinanceForm>
     </div>

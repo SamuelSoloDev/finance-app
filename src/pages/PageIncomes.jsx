@@ -27,10 +27,6 @@ export function IncomesPage() {
         transactionType={"Ingresos"}
         eventSubmit={eventOnSubmit}>
         </FinanceForm>
-
-        <button className="px-4 py-2 bg-green-500 text-white rounded" onClick={backToHome}>
-        regresar a Home
-      </button>
       </div>
   )
 

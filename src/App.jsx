@@ -5,6 +5,7 @@ import { IncomesPage } from "./pages/PageIncomes"
 import { ExpensesPage } from "./pages/PageExpenses";
 import { DebtsPage } from "./pages/PageDebts";
 import { HistoryPage } from "./pages/HistoryPage";
+import {PageDebtsForm} from "./pages/PageDebtsForm"
 import './App.css'
 
     /*<Route path="/expense" element={<FinanceForm type="expense" />} />
@@ -18,6 +19,7 @@ function App() {
       <Route path='/income' element={<IncomesPage/>}></Route>
       <Route path='/expense' element={<ExpensesPage/>}></Route>
       <Route path='/debt' element={<DebtsPage/>}></Route>
+      <Route path='/debtForm' element={<PageDebtsForm/>}></Route>
       <Route path='/history' element={<HistoryPage/>}></Route>
     </Routes>
   )

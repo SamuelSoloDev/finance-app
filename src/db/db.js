@@ -1,7 +1,7 @@
 import { openDB } from 'idb'
 
 export const DB_NAME = 'finance-db'
-export const DB_VERSION = 1
+export const DB_VERSION = 2
 
 export const dbPromise = openDB(DB_NAME, DB_VERSION, {
   upgrade(db) {
@@ -15,6 +15,9 @@ export const dbPromise = openDB(DB_NAME, DB_VERSION, {
 
     if (!db.objectStoreNames.contains('income')) {
       db.createObjectStore('income', { keyPath: 'id' })
+    }
+    if (!db.objectStoreNames.contains("name")){
+      db.createObjectStore("profile", { keyPath: "id" })
     }
   }
 })

@@ -4,17 +4,46 @@ import { HistoryList } from "../components/ul/ul";
 import { useDebt } from "../hooks/useDebt";
 import { useExpense } from "../hooks/useExpense";
 import { useIncome } from "../hooks/useIconme";
+import { useName} from "../hooks/useName"
 import { Summary } from "../components/homeComponents/summary";
 import { LinkButtons } from "../components/homeComponents/linkButtons";
+import Modal from "../components/Modal"
 import { useNavigate } from "react-router-dom";
+import { NameForm } from "../components/homeComponents/nameForm";
 
 
 export default function Home() {
   const {expenses, remove: removeExpense} = useExpense();
   const {incomes, remove: removeIcome} = useIncome();
   const {debts, remove: removeDebt} = useDebt();
+  const {name, update, reload, erase, loading} = useName()
   const navigate = useNavigate();
-  const globalHIstory = [...expenses, ...incomes, ...debts]
+  const globalHIstory = [...expenses, ...incomes]
+
+console.log("############################");
+console.log(`nombre al inicio ${name?.name}`);
+
+if (loading) {
+  return null
+}
+
+const modalIsOpen = !name;
+console.log("##########################");
+console.log("MODAL ES:");
+
+
+console.log(modalIsOpen);
+
+
+/* useEffect(() => {
+  if (!name?.name && !loading) {
+    setModalIsOpen(true);
+  }
+  else if (!name) {
+    setModalIsOpen(true)
+  }
+}, [name]); */
+
 
 
   const REMOVE_FUNCTIONS = {
@@ -22,6 +51,17 @@ export default function Home() {
     income: removeIcome,
     debt: removeDebt
   }
+
+  function changeName() {
+    setModalIsOpen(true)
+  }
+
+  async function reset() {
+   await erase()
+   await reload()
+    setModalIsOpen(true)
+  }
+
 
   function navigateTo(page) {
     navigate(`/${page}`)
@@ -41,7 +81,9 @@ export default function Home() {
 </div>
 <div className="flex-1 px-3">
 <p className="text-slate-500 dark:text-rose-300/60 text-xs font-medium uppercase tracking-wider">Good Morning</p>
-<h2 className="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Alex Rivera</h2>
+<h2 onClick={changeName}
+className="text-slate-900 dark:text-white text-lg
+ font-bold leading-tight tracking-tight">{name?.name}</h2>
 </div>
 <div className="flex w-12 items-center justify-end">
 <button className="flex size-10 cursor-pointer items-center justify-center rounded-full bg-slate-200 dark:bg-rose-500/10 text-slate-900 dark:text-rose-400">
@@ -58,17 +100,10 @@ export default function Home() {
 
       <HistoryList
       handleDelete={handleDelete}
-      list={globalHIstory}
+      list={globalHIstory.slice(0, 3)}
       ></HistoryList>
 
-      <div className="fixed bottom-24 right-6 z-50">
-        <button className="flex size-14 items-center justify-center rounded-full
-        bg-linear-to-tr from-rose-600 to-[#d946ef] text-white shadow-[0_8px_30px_rgb(225,29,72,0.3)]
-        hover:scale-105 active:scale-95
-        transition-transform">
-<span className="material-symbols-outlined" >add</span>
-</button>
-</div>
+
 
       <div className="fixed bottom-0 left-0 right-0 max-w-md mx-auto h-20
        bg-white/80 dark:bg-[#0f0714]/80
@@ -83,6 +118,35 @@ transition-colors">history</span>
 uppercase group-hover:text-magenta-accent transition-colors">History</span>
 </button>
 </div>
+
+
+
+{modalIsOpen && (
+  <Modal>
+    <NameForm onClickEvent={async (newName) => {
+      await update(newName);
+      await reload()
+      setModalIsOpen(false);
+    }} />
+  </Modal>
+)}
+
+
     </div>
   )
 }
+
+/*
+
+componente botón +
+
+<div className="fixed bottom-24 right-6 z-50">
+        <button
+         className="flex size-14 items-center justify-center rounded-full
+        bg-linear-to-tr from-rose-600 to-[#d946ef] text-white shadow-[0_8px_30px_rgb(225,29,72,0.3)]
+        hover:scale-105 active:scale-95
+        transition-transform">
+<span className="material-symbols-outlined" >add</span>
+</button>
+</div>
+*/
