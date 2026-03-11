@@ -28,7 +28,7 @@ export function DebtsPage() {
       <button onClick={backToHome} className="flex items-center justify-center size-10 rounded-full bg-[#1e1b26] hover:bg-[#2a2635] transition-colors">
         <span className="material-symbols-outlined text-xl">chevron_left</span>
       </button>
-      <h2 className="text-lg font-semibold tracking-tight">Debt History</h2>
+      <h2 className="text-lg font-semibold tracking-tight">Historial de deudas</h2>
       <div className="size-10"></div>
     </header>
 
@@ -45,8 +45,7 @@ export function DebtsPage() {
 
     <section className="px-6 flex-1">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-sm font-medium text-slate-400 uppercase tracking-widest">Recent Payments</h3>
-        <span className="text-xs text-slate-500">Last 30 days</span>
+        <h3 className="text-sm font-medium text-slate-400 uppercase tracking-widest">Deudas Recientes</h3>
       </div>
 
       <div className="space-y-4">

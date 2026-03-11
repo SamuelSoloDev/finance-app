@@ -19,7 +19,7 @@ export default function Home() {
   const {name, update, reload, erase, loading} = useName()
   const navigate = useNavigate();
   const globalHIstory = [...expenses, ...incomes]
-
+  const [newModalIsOpen, setNewModalIsOpen] = useState(false);
 console.log("############################");
 console.log(`nombre al inicio ${name?.name}`);
 
@@ -53,13 +53,13 @@ console.log(modalIsOpen);
   }
 
   function changeName() {
-    setModalIsOpen(true)
+    setNewModalIsOpen(true)
   }
 
   async function reset() {
    await erase()
    await reload()
-    setModalIsOpen(true)
+    setNewModalIsOpen(true)
   }
 
 
@@ -80,7 +80,7 @@ console.log(modalIsOpen);
 </div>
 </div>
 <div className="flex-1 px-3">
-<p className="text-slate-500 dark:text-rose-300/60 text-xs font-medium uppercase tracking-wider">Good Morning</p>
+<p className="text-slate-500 dark:text-rose-300/60 text-xs font-medium uppercase tracking-wider">¡Buen día!</p>
 <h2 onClick={changeName}
 className="text-slate-900 dark:text-white text-lg
  font-bold leading-tight tracking-tight">{name?.name}</h2>
@@ -126,7 +126,16 @@ uppercase group-hover:text-magenta-accent transition-colors">History</span>
     <NameForm onClickEvent={async (newName) => {
       await update(newName);
       await reload()
-      setModalIsOpen(false);
+    }} />
+  </Modal>
+)}
+
+{newModalIsOpen && (
+  <Modal>
+    <NameForm onClickEvent={async (newName) => {
+      await update(newName);
+      await reload()
+      setNewModalIsOpen(false);
     }} />
   </Modal>
 )}

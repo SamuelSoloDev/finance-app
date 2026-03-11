@@ -15,7 +15,7 @@ export function LinkButtons({navigateTo}) {
           <span className="material-symbols-outlined text-rose-400
           group-hover:scale-110 transition-transform"
           >history</span>
-          <span className="text-slate-700 dark:text-white text-xs font-bold tracking-tight">Historial</span>
+          <span className="text-slate-700 dark:text-white text-xs font-bold tracking-tight">Ingresos</span>
          </button>
 
         <button onClick={() => navigateTo("expense")}

@@ -20,10 +20,10 @@ export function NameForm({onClickEvent}) {
 
         <header className="mb-12">
           <h1 className="text-3xl font-bold tracking-tight text-white mb-2">
-            Welcome to your space
+           Bienvenido a tu espacio
           </h1>
           <p className="text-rose-300/60 text-sm">
-            Let's personalize your experience.
+            Vamos a personalizar tu experiencia
           </p>
         </header>
 
@@ -31,7 +31,7 @@ export function NameForm({onClickEvent}) {
 
           <section className="space-y-4">
             <label className="block text-rose-200/80 text-sm font-medium px-1">
-              What should we call you?
+              ¿Cómo deberíamos llamarte?
             </label>
 
             <input
@@ -53,12 +53,8 @@ export function NameForm({onClickEvent}) {
               active:scale-[0.98] transition-all disabled:opacity-40"
               disabled={!name.trim()}
             >
-              Get Started
+              Empecemos
             </button>
-
-            <p className="text-center text-rose-300/30 text-[10px] mt-6 uppercase tracking-widest font-medium">
-              Step 1 of 3 • Profile Setup
-            </p>
           </footer>
 
         </form>

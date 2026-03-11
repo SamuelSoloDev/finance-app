@@ -31,7 +31,7 @@ export function DetailsModal({
           }`}
         >
           <p className="text-white/80 text-sm font-medium uppercase tracking-widest mb-2">
-            Total Amount
+            Monto Total
           </p>
           <h1 className="text-white text-5xl font-bold leading-none">
             {isExpense ? "-" : "+"}${amount}
@@ -54,7 +54,7 @@ export function DetailsModal({
             <div>
               <p className="text-white text-base font-semibold">{name}</p>
               <p className="text-[#c992a4] text-xs uppercase tracking-wider">
-                Transaction
+                Transacción
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ export function DetailsModal({
             <div>
               <p className="text-white text-base font-semibold">{date}</p>
               <p className="text-[#c992a4] text-xs uppercase tracking-wider">
-                Date
+                Fecha
               </p>
             </div>
           </div>
@@ -77,7 +77,7 @@ export function DetailsModal({
             <div className="mt-4 px-4">
               <div className="bg-[#2d171f] p-4 rounded-2xl border border-white/5">
                 <p className="text-[#c992a4] text-[10px] font-bold uppercase tracking-widest mb-2">
-                  Note
+                  Nota
                 </p>
                 <p className="text-white/90 text-sm leading-relaxed">
                   {note}

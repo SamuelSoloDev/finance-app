@@ -95,7 +95,7 @@ export default function FinanceForm({ eventSubmit, transactionType }) {
 
               <div className="space-y-2">
                 <label className="text-rose-200/40 text-xs font-medium ml-1">
-                  Name
+                  Nombre
                 </label>
 
                 <input
@@ -111,7 +111,7 @@ export default function FinanceForm({ eventSubmit, transactionType }) {
 
               <div className="space-y-2">
                 <label className="text-rose-200/40 text-xs font-medium ml-1">
-                  Date
+                  Fecha
                 </label>
 
                 <input
@@ -126,7 +126,7 @@ export default function FinanceForm({ eventSubmit, transactionType }) {
 
               <div className="space-y-2">
                 <label className="text-rose-200/40 text-xs font-medium ml-1">
-                  Note
+                  Nota
                 </label>
 
                 <textarea
@@ -157,7 +157,7 @@ export default function FinanceForm({ eventSubmit, transactionType }) {
             type="button"
             className="w-full py-2 text-rose-300/40 text-sm font-medium hover:text-rose-300 transition-colors"
           >
-            Cancel
+            Cancelar
           </button>
         </div>
 

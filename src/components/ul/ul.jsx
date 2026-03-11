@@ -39,7 +39,7 @@ export function HistoryList({list, handleDelete}) {
 return (
   <div className="px-4 mt-6 h-full">
     <div className="flex items-center justify-between mb-4">
-      <h3 className="text-slate-900 dark:text-white text-md font-bold">Recent Activity</h3>
+      <h3 className="text-slate-900 dark:text-white text-md font-bold">Actividad Reciente</h3>
 
     </div>
 

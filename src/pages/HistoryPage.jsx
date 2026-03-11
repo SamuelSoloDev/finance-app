@@ -39,10 +39,21 @@ export function HistoryPage() {
       rounded-full bg-slate-200 dark:bg-white/5 text-slate-900 dark:text-rose-400">
         <span className="material-symbols-outlined">chevron_left</span>
       </button>
-      <h1 className="text-lg font-bold tracking-tight">History</h1>
+      <h1 className="text-lg font-bold tracking-tight">Historial</h1>
       <div className="size-10"></div>
       </div>
-      <div class="flex gap-3">
+
+
+    </div>
+    <HistoryList list={globalHIstory}></HistoryList>
+  </div>
+  )
+
+}
+
+
+/*
+    <div class="flex gap-3">
 <div class="relative flex-1">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-rose-300/40">search</span>
 <input class="w-full bg-slate-100 dark:bg-white/5
@@ -55,11 +66,4 @@ placeholder="Search transactions..." type="text"/>
 <button class="flex size-12 items-center justify-center rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 text-rose-400">
 <span class="material-symbols-outlined">tune</span>
 </button>
-</div>
-
-    </div>
-    <HistoryList list={globalHIstory}></HistoryList>
-  </div>
-  )
-
-}
+</div> */

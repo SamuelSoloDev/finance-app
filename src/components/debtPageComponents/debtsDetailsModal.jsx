@@ -32,7 +32,7 @@ export  function TransactionModal({
           }}
         >
           <span className="text-white/70 text-xs font-semibold uppercase tracking-[0.2em] mb-2">
-            Total Amount Paid
+            Monto total a pagar
           </span>
 
           <h1 className="text-5xl font-serif text-white tracking-tight">
@@ -46,7 +46,7 @@ export  function TransactionModal({
           {/* Transaction Name */}
           <div className="flex flex-col gap-1">
             <span className="text-[10px] text-slate-500 uppercase font-bold tracking-widest">
-              Transaction Name
+              Nombre de la deuda
             </span>
 
             <div className="flex items-center gap-3">
@@ -63,7 +63,7 @@ export  function TransactionModal({
           {/* Date */}
           <div className="flex flex-col gap-1">
             <span className="text-[10px] text-slate-500 uppercase font-bold tracking-widest">
-              Payment Date
+              Fecha
             </span>
 
             <div className="flex items-center gap-3">
@@ -80,7 +80,7 @@ export  function TransactionModal({
           {/* Note */}
           <div className="flex flex-col gap-2">
             <span className="text-[10px] text-slate-500 uppercase font-bold tracking-widest">
-              Note
+              Nota
             </span>
 
             <div className="bg-[#2d2438]/50 border border-[#4a3b5c]/30 rounded-2xl p-4">
@@ -99,7 +99,7 @@ export  function TransactionModal({
               <span className="material-symbols-outlined text-lg">
                 delete
               </span>
-              Delete Transaction
+              Borrar Deuda
             </button>
           </div>
         </div>
